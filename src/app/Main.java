@@ -8,8 +8,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("App for converting units of temperature.");
         double tempF = 12;
+        double tempC = 20;
         double celsiyDegree = convtempFTotempC(tempF);
-        System.out.println("Result is " + celsiyDegree + " tempC.");
+        double farengateDegree = convtempCTotempF(tempC);
+        System.out.println("Result is " + celsiyDegree + " tempC and " + farengateDegree + " tempF.");
 
     }
 
@@ -18,5 +20,10 @@ public class Main {
 
     }
 
+        private static double convtempCTotempF ( double tempC) {
+            return tempC * CONV_K1 + CONV_K2;
 
-}
+        }
+
+
+    }
